@@ -1,0 +1,29 @@
+[package]
+name = "catena"
+version = "0.1.0"
+authors = ["Nicolai Ruckel <nicolai.ruckel@uni-weimar.de>",
+           "Fabian Platz <fabian.platz@uni-weimar.de>"]
+readme = "Readme.md"
+description = "Catena implementation in Rust"
+
+# The testing profile, used for `cargo test`. This enables optimizations because
+# otherwise the tests take way too much time to run.
+[profile.test]
+opt-level = 3
+debug = true
+rpath = false
+lto = false
+debug-assertions = true
+codegen-units = 1
+panic = 'unwind'
+
+[features]
+# Run additional tests with non-reduced Catena instances.
+fulltest = []
+
+[dependencies]
+blake2-rfc = "0.2"
+xorshift = "0.1"
+serde_json = "1.0"
+rand = "0.3"
+time = "0.1"
