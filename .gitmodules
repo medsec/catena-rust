@@ -1,0 +1,3 @@
+[submodule "test/catena-testvectors"]
+	path = test/catena-testvectors
+	url = https://github.com/RanaExMachina/catena-testvectors.git
