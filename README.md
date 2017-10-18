@@ -3,6 +3,17 @@
 This is an implementation of the memory-consuming password scrambler Catena in
 Rust.
 
+##
+
+For the tests the test vectors from the [Catena Test Vectors
+Repository](https://github.com/RanaExMachina/catena-testvectors), which are
+included as a git submodule, are required. To clone this repository with all
+submodules run
+
+```
+git clone --recursive https://github.com/RanaExMachina/catena-rust.git
+```
+
 ## Requirements
 
 - rustc
