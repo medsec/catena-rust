@@ -28,27 +28,24 @@
 //!
 //! ```
 //! pub trait Algorithms {
-//!     /// The cryptographic hash function H
-//!     fn h (&self, x: &Vec<u8>) -> Vec<u8>;
+//!   /// The cryptographic hash function H
+//!   fn h (&self, x: &Vec<u8>) -> Vec<u8>;
 //!
-//!     /// The (possible reduced) hash function H'
-//!     fn h_prime (&mut self, x: &Vec<u8>) -> Vec<u8>;
+//!   /// The (possible reduced) hash function H'
+//!   fn h_prime (&mut self, x: &Vec<u8>) -> Vec<u8>;
 //!
-//!     /// Reset the state of the reduced hash function H'.
-//!     /// This is not neccessary if H' = H.
-//!     fn reset_h_prime(&mut self) { }
+//!   /// Reset the state of the reduced hash function H'.
+//!   /// This is not neccessary if H' = H.
+//!   fn reset_h_prime(&mut self) { }
 //!
-//!     /// The optional password-independent random layer Γ
-//!     fn gamma(&mut self, garlic: u8, state: Vec<u8>,
-//!       gamma: &Vec<u8>, k: usize) -> Vec<u8>;
+//!   /// The optional password-independent random layer Γ
+//!   fn gamma(&mut self, garlic: u8, state: Vec<u8>, gamma: &Vec<u8>, k: usize) -> Vec<u8>;
 //!
-//!     /// The graph-based hash function F
-//!     fn f(&mut self, garlic: &u8, state: &mut Vec<u8>,
-//!       lambda: u8, n: usize, k: usize) -> Vec<u8>;
+//!   /// The graph-based hash function F
+//!   fn f(&mut self, garlic: &u8, state: &mut Vec<u8>, lambda: u8, n: usize, k: usize) -> Vec<u8>;
 //!
-//!     /// The optional password-dependent random layer Φ
-//!     fn phi(&mut self, garlic: u8, state: Vec<u8>, mu: &Vec<u8>,
-//!       k: usize) -> Vec<u8>;
+//!   /// The optional password-dependent random layer Φ
+//!   fn phi(&mut self, garlic: u8, state: Vec<u8>, mu: &Vec<u8>, k: usize) -> Vec<u8>;
 //! }
 //! ```
 //!
@@ -72,19 +69,19 @@
 //! // define H, H', Gamma, F and Phi
 //! #[allow(unused_variables)]
 //! impl catena::catena::Algorithms for CustomCatena {
-//!     fn h (&self, x: &Vec<u8>) -> Vec<u8> {
-//!         catena::components::hash::blake2b::hash(x)
-//!     }
+//!   fn h (&self, x: &Vec<u8>) -> Vec<u8> {
+//!       catena::components::hash::blake2b::hash(x)
+//!   }
 //!
-//!     fn h_prime (&mut self, x: &Vec<u8>) -> Vec<u8> { self.h(x) }
+//!   fn h_prime (&mut self, x: &Vec<u8>) -> Vec<u8> { self.h(x) }
 //!
-//!     fn gamma (&mut self, garlic: u8, state: Vec<u8>, gamma: &Vec<u8>, k: usize
-//!     ) -> Vec<u8> { state }
+//!   fn gamma (&mut self, garlic: u8, state: Vec<u8>, gamma: &Vec<u8>, k: usize
+//!   ) -> Vec<u8> { state }
 //!
-//!     fn f (&mut self, garlic: &u8, state: &mut Vec<u8>, lambda: u8, n: usize, k: usize
-//!     ) -> Vec<u8> { state.clone() }
+//!   fn f (&mut self, garlic: &u8, state: &mut Vec<u8>, lambda: u8, n: usize, k: usize
+//!   ) -> Vec<u8> { state.clone() }
 //!
-//!     fn phi (&mut self, garlic: u8, state: Vec<u8>, mu: &Vec<u8>, k: usize) -> Vec<u8> { state }
+//!   fn phi (&mut self, garlic: u8, state: Vec<u8>, mu: &Vec<u8>, k: usize) -> Vec<u8> { state }
 //! }
 //! ```
 //!
