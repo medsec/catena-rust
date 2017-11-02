@@ -99,8 +99,3 @@ Build with
 ```
 cargo build --example dragonfly-full
 ```
-
-## Todo
-
-- overwrite the password after tweak computation
-- optimize performance
