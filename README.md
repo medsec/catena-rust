@@ -2,7 +2,7 @@
 
 This is an implementation of the memory-consuming password scrambler Catena in
 Rust.
-The implementation is not optimal and the performance could probably be increased a lot.
+The current implementation is not optimal and the performance could probably be increased a lot.
 
 ## Submodules
 
