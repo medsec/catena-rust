@@ -2,8 +2,9 @@
 
 This is an implementation of the memory-consuming password scrambler Catena in
 Rust.
+The implementation is not optimal and the performance could probably be increased a lot.
 
-##
+## Submodules
 
 For the tests the test vectors from the [Catena Test Vectors
 Repository](https://github.com/RanaExMachina/catena-testvectors), which are
