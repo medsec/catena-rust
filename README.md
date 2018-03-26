@@ -11,7 +11,7 @@ included as a git submodule, are required. To clone this repository with all
 submodules run
 
 ```
-git clone --recursive https://github.com/RanaExMachina/catena-rust.git
+git clone --recursive https://github.com/medsec/catena-rust.git
 ```
 
 ## Requirements
